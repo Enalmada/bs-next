@@ -1,6 +1,6 @@
-# bs-next
+# bs-next-alt
 
-[Reason](https://reasonml.github.io) bindings for
+[Reason](https://reasonml.github.io) v5 bindings for
 [Next.js](https://github.com/zeit/next.js) v6.
 
 ## API
@@ -29,3 +29,4 @@ let make = (_children) => {
     </div>
 }
 ```
+

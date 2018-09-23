@@ -7,3 +7,5 @@
 bundledOutputs/
 finalOutput/*.js
 node_modules
+.idea
+*.tgz
