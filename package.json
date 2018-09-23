@@ -1,6 +1,6 @@
 {
   "name": "bs-next-alt",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Reason bindings for Next.js",
   "main": "index.js",
   "scripts": {

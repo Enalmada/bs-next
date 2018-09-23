@@ -30,3 +30,28 @@ let make = (_children) => {
 }
 ```
 
+Bindings also provided for the only two components provided by Next.js:
+
+* [`NextSeo`](https://github.com/garmeeh/next-seo#readme)
+
+```
+
+[@bs.deriving abstract]
+type nextSeoConfig = {
+  canonical: string,
+  title: string
+};
+
+let config = nextSeoConfig(~canonical="https://www.gell.com", ~title="About")
+
+
+let make = _children => {
+  ...component,
+  render: _self =>
+    <Fragment>
+        <NextSeo config={config} />
+      /* <ReactHelmet> <title> {ReasonReact.string("AboutPage")} </title> </ReactHelmet> */
+      <ConsumerPage> <p> {ReasonReact.string("BS Index here")} </p> <Counter /> </ConsumerPage>
+    </Fragment>,
+};
+```
