@@ -5,10 +5,10 @@
 
 ## API
 
-Bindings are provided for the only two components provided by Next.js:
+Bindings for native Next.js components:
 
-* [`Next.Head`](https://github.com/zeit/next.js/tree/6.0.3#populating-head)
-* [`Next.Link`](https://github.com/zeit/next.js/tree/6.0.3#with-link)
+* [`Next.Head`](https://github.com/zeit/next.js/#populating-head)
+* [`Next.Link`](https://github.com/zeit/next.js/#with-link)
 
 ## Example
 
@@ -30,28 +30,10 @@ let make = (_children) => {
 }
 ```
 
-Bindings also provided for the only two components provided by Next.js:
+Bindings for data-prefetch-next which extends Next.Link:
 
-* [`NextSeo`](https://github.com/garmeeh/next-seo#readme)
-
-```
-
-[@bs.deriving abstract]
-type nextSeoConfig = {
-  canonical: string,
-  title: string
-};
-
-let config = nextSeoConfig(~canonical="https://www.gell.com", ~title="About")
-
-
-let make = _children => {
-  ...component,
-  render: _self =>
-    <Fragment>
-        <NextSeo config={config} />
-      /* <ReactHelmet> <title> {ReasonReact.string("AboutPage")} </title> </ReactHelmet> */
-      <ConsumerPage> <p> {ReasonReact.string("BS Index here")} </p> <Counter /> </ConsumerPage>
-    </Fragment>,
-};
+```reason
+      <DataPrefetchLink href="/about" prefetch=true withData=true >
+        <a> (ReasonReact.stringToElement("About")) </a>
+      </DataPrefetchLink>
 ```

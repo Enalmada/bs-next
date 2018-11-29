@@ -3,6 +3,7 @@
 .bsb.lock
 .merlin
 /lib/bs/
+/lib/js/
 /lib/ocaml/
 bundledOutputs/
 finalOutput/*.js
